@@ -17,7 +17,7 @@ import io.cucumber.junit.*;
 		//strict=true (this is going skipped all the unimplemented methods and failed the test 
 		// no really useful
          //if any undef step is going to treat it as a error
-		tags="@sprint1"
+		tags="@Homework"
 		,plugin= {
 				"pretty",//prints gherkin steps in console
 				"html:target/cucumber-default-report",// create basic html report in specified location

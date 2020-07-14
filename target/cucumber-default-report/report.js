@@ -1,80 +1,21 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/taskAlijohn.feature");
 formatter.feature({
-  "name": "Login",
+  "name": "Last name validation",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@Login"
-    },
-    {
-      "name": "@Sprint1"
-    }
-  ]
-});
-formatter.scenarioOutline({
-  "name": "",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@try"
-    }
-  ]
-});
-formatter.step({
-  "name": "user enter valid \"\u003cUsername\u003e\" and \"\u003cPassword\u003e\"",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user click on login button",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "\"\u003cFirstName\u003e\" is successfully logged in",
-  "keyword": "Then "
-});
-formatter.examples({
-  "name": "",
-  "description": "",
-  "keyword": "Examples",
-  "rows": [
-    {
-      "cells": [
-        "Username",
-        "Password",
-        "FirstName"
-      ]
-    },
-    {
-      "cells": [
-        "Elvira",
-        "Syntax123.",
-        "Elvira"
-      ]
-    },
-    {
-      "cells": [
-        "Admin",
-        "Hum@nhrm123",
-        "Admin"
-      ]
+      "name": "@Homework"
     }
   ]
 });
 formatter.scenario({
-  "name": "",
+  "name": "LastName validation",
   "description": "",
-  "keyword": "Scenario Outline",
+  "keyword": "Scenario",
   "tags": [
     {
-      "name": "@Login"
-    },
-    {
-      "name": "@Sprint1"
-    },
-    {
-      "name": "@try"
+      "name": "@Homework"
     }
   ]
 });
@@ -82,91 +23,86 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enter valid \"Elvira\" and \"Syntax123.\"",
-  "keyword": "When "
+  "name": "user is logged with valid admin credentials",
+  "keyword": "Given "
 });
 formatter.match({
-  "location": "com.hrms.steps.LoginSteps.user_enter_valid_and(java.lang.String,java.lang.String)"
+  "location": "com.hrms.steps.LoginSteps.user_is_logged_with_valid_admin_credentials()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user click on login button",
+  "name": "user navigate to employee list page",
   "keyword": "And "
 });
 formatter.match({
-  "location": "com.hrms.steps.LoginSteps.user_click_on_login_button()"
+  "location": "com.hrms.steps.EmployeeSearchSteps.user_navigate_to_employee_list_page()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Elvira\" is successfully logged in",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.hrms.steps.LoginSteps.is_successfully_logged_in(java.lang.String)"
-});
-formatter.result({
-  "error_message": "org.junit.ComparisonFailure: Test case failed  expected:\u003cWelcome[1] Elvira\u003e but was:\u003cWelcome[] Elvira\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:117)\n\tat com.hrms.steps.LoginSteps.is_successfully_logged_in(LoginSteps.java:105)\n\tat ✽.\"Elvira\" is successfully logged in(file:///Users/griseydaperla/eclipse-workspace/Hrms/src/test/resources/features/Login.feature:19)\n",
-  "status": "failed"
-});
-formatter.embedding("image/png", "embedded0.png", "");
-formatter.after({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@Login"
-    },
-    {
-      "name": "@Sprint1"
-    },
-    {
-      "name": "@try"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enter valid \"Admin\" and \"Hum@nhrm123\"",
+  "name": "user enters valid employee \"14688\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.hrms.steps.LoginSteps.user_enter_valid_and(java.lang.String,java.lang.String)"
+  "location": "com.hrms.steps.EmployeeSearchSteps.user_enters_valid_employee_id(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user click on login button",
+  "name": "click on search button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "com.hrms.steps.LoginSteps.user_click_on_login_button()"
+  "location": "com.hrms.steps.EmployeeSearchSteps.click_on_search_button()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Admin\" is successfully logged in",
+  "name": "verify table is displayed",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.hrms.steps.LoginSteps.is_successfully_logged_in(java.lang.String)"
+  "location": "com.hrms.steps.EmployeeSearchSteps.verify_table_is_displayed()"
 });
 formatter.result({
-  "error_message": "org.junit.ComparisonFailure: Test case failed  expected:\u003cWelcome[1] Admin\u003e but was:\u003cWelcome[] Admin\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:117)\n\tat com.hrms.steps.LoginSteps.is_successfully_logged_in(LoginSteps.java:105)\n\tat ✽.\"Admin\" is successfully logged in(file:///Users/griseydaperla/eclipse-workspace/Hrms/src/test/resources/features/Login.feature:19)\n",
-  "status": "failed"
+  "status": "passed"
 });
-formatter.embedding("image/png", "embedded1.png", "");
+formatter.step({
+  "name": "get last name from table",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.hrms.steps.EmployeeSearchSteps.get_last_name_from_table()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "get the last name from DB",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.hrms.steps.DBSteps.get_the_last_name_from_DB()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I validate last name from DB against UI",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.hrms.steps.EmployeeSearchSteps.i_validate_last_name_from_DB_against_UI()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.embedding("image/png", "embedded0.png", "LastName validation");
 formatter.after({
   "status": "passed"
 });
