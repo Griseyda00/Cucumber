@@ -5,7 +5,7 @@ Background:
 
   @smoke
   Scenario: Search employee by id
-    When user enters valid employee id
+    When user enters valid employee "14688"
     And click on search button
     Then user see employee information is displayed
 

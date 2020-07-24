@@ -46,13 +46,13 @@ public class LoginSteps extends CommonMethods{
 
 	@When("user enter valid ess username and password")
 	public void user_enter_valid_ess_username_and_password() {
-		 sendText(login.username, "Elvira");
-		  sendText(login.password, "Syntax123.");
+		 sendText(login.username, "Griseyda");
+		  sendText(login.password, "Syntax123#");
 	}
 
 	@Then("ess user is successfully logged in")
 	public void ess_user_is_successfully_logged_in() {
-		String expected = "Welcome Elvira";
+		String expected = "Welcome Griseyda";
 		String actual = dashboard.welcome.getText();
 		Assert.assertEquals("Welcome text is not display correctly", expected, actual);
 		System.out.println(actual);
@@ -83,7 +83,7 @@ public class LoginSteps extends CommonMethods{
 	    // For other transformations you can register a DataTableType.
 	   List<Map<String, String>> list = dataTable.asMaps();
 	   for(Map<String, String> map:list) {
-		   sendText(login.username,map.get("UserName"));
+		   sendText(login.username,map.get("Username"));
 		   sendText(login.username,map.get("Password"));
 		   jsClick(login.loginBtn);
 		   
