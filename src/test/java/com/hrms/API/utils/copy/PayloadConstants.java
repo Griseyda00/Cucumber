@@ -27,16 +27,21 @@ public class PayloadConstants {
 		return createEmployeeBody;
 	}	
 	/**
-	 * Created method to return payload - to reduce messy code
+	 * Creating payload using JSONObject and returning it as a String 
 	 * @return
 	 */
-	public static String createEmployee() {
-		JSONObject value=new JSONObject();	
-		value.put("employee_id", "Mahady");
+	
+	public static String creatEmployeePayload() {	
+		JSONObject obj = new JSONObject();
 		
-		
-		
-		return value.toString();
+		obj.put("emp_firstname", "syntaxFirstName");
+		obj.put("emp_lastname", "syntaxLastName");
+		obj.put("emp_middle_name", "syntaxMiddleName");
+		obj.put("emp_gender", "F");
+		obj.put("emp_birthday", "2000-07-11");
+		obj.put("emp_status", "Employee");
+		obj.put("emp_job_title", "Cloud Architect");		
+		return obj.toString();	
 	}
 
 	
