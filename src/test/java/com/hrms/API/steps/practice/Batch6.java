@@ -15,5 +15,24 @@ public static String body() {
 			"}";
 	return res;
 }
+ public static String body2() {
+	String res="{\n" + 
+			"   \"employee_id\": \""+HardcodedExamples.employeeID+"\",\n" + 
+			"   \"emp_firstname\": \"Rose\"\n" + 
+			"}";
+	return res;
+ }
+public static String body3() {
+	String res="{\n" + 
+			"  \"emp_firstname\": \"Mahady\",\n" + 
+			"  \"emp_lastname\": \"Brian\",\n" + 
+			"  \"emp_middle_name\": \"Mahad\",\n" + 
+			"  \"emp_gender\": \"M\",\n" + 
+			"  \"emp_birthday\": \"2000-07-10\",\n" + 
+			"  \"emp_status\": \"Employee\",\n" + 
+			"  \"emp_job_title\": \"Cloud Architect\"\n" + 
+			"}";
+	return res;
+}
 
 }

@@ -64,7 +64,9 @@ public class AddEmployeeSteps extends CommonMethods{
 
 	@When("user enters login credentials")
 	public void user_enters_login_credentials() {
+		wait(2);
 		sendText(login.username, ConfigsReader.getProperty("username"));
+		wait(2);
 		sendText(login.password, ConfigsReader.getProperty("password"));
 		click(login.loginBtn);
 	}

@@ -12,7 +12,7 @@ public class LoginPageElements extends CommonMethods{
 		// public WebElement username2=driver.findElement(By.id("txtUsername"));
 
 		// Using PageFactory and @FindBy Annotation
-		@FindBy(xpath = "//div[@id='txtUsername']")
+		@FindBy(xpath = "//input[@id='txtUsername']")
 		public WebElement username;
 
 		@FindBy(name = "txtPassword")

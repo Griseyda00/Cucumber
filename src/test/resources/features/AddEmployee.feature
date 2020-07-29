@@ -1,22 +1,22 @@
+
 Feature: Add new Employee
 Background: 
     Given user is logged with valid admin credentials 
     And user navigates to AddEmployeePage
 
-  @smoke
+
   Scenario: Add Employee with first and lastname
     When user enters employees "John" and "Smith"
     And user clicks save button
     Then "John Smith" is added successfully
 
-  @smoke
+
   Scenario: Add Employee without employee id
     When user enters employees first name and last name
     And user deletes employee id
     And user clicks save button
     Then employee is added successfully
 
-  @smoke
   Scenario: AddEmployee and create Login Credentials
     When user enters employees first name and last name
     And user clicks on create login checkbox
@@ -25,7 +25,7 @@ Background:
     Then employee is added successfully
     
     #to perform DDT in cucumber we use Scenario Outline with Examples
-  @smoke
+ 
   Scenario Outline: Adding multiple employees
     When user enter employees "<FirstName>", "<MiddleName>" and "<LastName>"
     And user clicks save button
@@ -37,7 +37,7 @@ Background:
       | Sohil     | S          | Instuctor |
       | Yunus     | Emre       | Yakut     |
       #adding multiple employees using Cucumber DataTable
-  @smoke
+  
   Scenario: Adding multiple employees
     When user enters employee details and click on save then employee is added
       | FirstName | MiddleName | LastName |

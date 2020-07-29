@@ -70,7 +70,7 @@ public class LoginSteps extends CommonMethods{
 	public void user_see_Invalid_Credentials_text_on_login_page() {
 	    String expected="Invalid credentials";
 	    String actual=login.errorMsg.getText();
-	    Assert.assertEquals("Not corroect message is display 1", expected, actual);
+	    Assert.assertEquals("Not correct message is display", expected, actual);
 	} 
 	@When("I enter invalid username and password and see error message")
 	public void i_enter_invalid_username_and_password_and_see_error_message(DataTable dataTable) {
@@ -100,7 +100,7 @@ public class LoginSteps extends CommonMethods{
 
 	@Then("{string} is successfully logged in")
 	public void is_successfully_logged_in(String name) {
-	     String expected="Welcome1"+" "+name;
+	     String expected="Welcome"+" "+name;
 	     String actual=dashboard.welcome.getText();
 	     Assert.assertEquals("Test case failed ", expected, actual);
 	}

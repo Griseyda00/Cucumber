@@ -20,8 +20,8 @@ Feature: Login
 
     Examples: 
       | Username | Password    | FirstName |
-      | Elvira   | Syntax123. |    Elvira   |
-      | Admin    | Hum@nhrm123 | Admin |
+      | Griseydal   | Syntax123. |GRISEYDA|
+      | Admin    | Hum@nhrm123 |Admin|
 
   @smoke
   Scenario: Login with valid username and invalid password
@@ -33,5 +33,5 @@ Feature: Login
    Scenario: Login with invalid credentials
    When I enter invalid username and password and see error message
    |Username| Password | ErrorMessage|
-   |Admin |admin123 |Invalid credentials |
-   |Hello|Syntax123!|Invalid credentials |
+   |Admin |admin123 |Password cannot be empty|
+   |Hello|Syntax123!|Password cannot be empty|
